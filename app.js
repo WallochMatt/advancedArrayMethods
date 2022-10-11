@@ -295,14 +295,55 @@ function problemSeven(){
 //Map
 
 
+function problemEight(){
+    let listOfCuisineTypes = dishes.map(function(el){
+        return el.cuisine;
+    })
+    return listOfCuisineTypes;
+}
+// let allCuisineTypes = problemEight();
+// console.log('Array of cuisine types: ', allCuisineTypes)
+
+
+
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
 
 
+function problemNine(){
+    let specifiedCuisine = dishes.map(function(el){
+        return el.cuisine + " " + el.name;
+    })
+    return specifiedCuisine;
+}
+// let allDishesWithSpecifiedCuisine = problemNine();
+// console.log('Array of dishes with their cuisine and name: ', allDishesWithSpecifiedCuisine)
+
+
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
 
+
+
+function problemTen(){
+
+    let results;
+    results = dishes.filter(function(el){
+        if(el.cuisine === "Vegetarian"){
+            return el.cuisine + " " + el.name;
+        }
+        else{
+            return false
+        }})
+
+    let finalResults = results.map(function(el){
+        return el.cuisine + " " + el.name
+    });
+    return finalResults
+}
+// let specifiedAsVegetarian = problemTen();
+// console.log('All dishes that are for sure vegetarian: ', specifiedAsVegetarian)
 
 
 

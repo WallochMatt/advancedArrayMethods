@@ -129,9 +129,8 @@ function filterExample(){
 
     return results;
 }
-
-let mexicanFood = filterExample();
-console.log('mexicanFood from filterExample', mexicanFood)
+// let mexicanFood = filterExample();
+// console.log('mexicanFood from filterExample', mexicanFood)
 
 
 
@@ -142,12 +141,43 @@ console.log('mexicanFood from filterExample', mexicanFood)
 function problemOne(){
 
     let results;
+    results = dishes.filter(function(el){
+        if(el.cuisine === "Vegetarian"){
+            return true;
+        }
+        else{
+            return false
+        }})
 
     return results;
 }
+// let vegetarianFood = problemOne();
+// console.log('vegetarian food from vegetarianFood: ', vegetarianFood)
+
+
 
 //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
 //Filter
+
+
+
+function problemTwo(){
+    let choice;
+    choice = prompt("Enter a cuisine")
+    let results;
+    results = dishes.filter(function(el){
+        if(el.cuisine === choice){
+            return true;
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
+// let userFood = problemTwo();
+// console.log('Your food list: ', userFood)
+
 
 
 
@@ -156,13 +186,61 @@ function problemOne(){
 
 
 
+function problemThree(){
+    let results;
+    results = dishes.filter(function(el){
+        if(el.cuisine === "Italian" && el.servings > 5){
+            return true;
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
+// let largeItalianFood = problemThree();
+// console.log('List of large serving Italian dishes: ', largeItalianFood)
+
+
+
 //4. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
+
+
+function problemFour(){
+    let results;
+    results = dishes.filter(function(el){
+        if(el.id === el.servings){
+            return true;
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
+// let matchingFood = problemFour();
+// console.log('List of dishes whose id number matches their serving count', matchingFood)
 
 
 
 //5. Create a function that will return only dishes whose serving count is even.
 //Filter
+
+function problemFive(){
+    let results;
+    results = dishes.filter(function(el){
+        if(el.servings % 2 === 0){
+            return true;
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
+// let evenServings = problemFive();
+// console.log('Dishes with even servings', evenServings)
 
 
 
@@ -172,9 +250,44 @@ function problemOne(){
 //Filter
 
 
+function problemSix(){
+    let results;
+    results = dishes.filter(function(el){
+        if(el.ingredients.includes("chickpea")){
+            return true;
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
+// let foodWithChickpeas = problemSix();
+// console.log('Dishes with chickpeas: ', foodWithChickpeas)
+
+
+
 
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
 //Filter
+
+
+function problemSeven(){
+    let choice;
+    choice = prompt("Enter an ingredient")
+    let results;
+    results = dishes.filter(function(el){
+        if(el.ingredients.includes(choice)){
+            return true;
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
+// let userChoiceIngredient = problemSeven();
+// console.log('Food with your chosen ingredient: ', userChoiceIngredient)
 
 
 

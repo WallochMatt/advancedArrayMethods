@@ -380,8 +380,8 @@ function problemEleven(){
 
     return results;
 }
-let tomatoAndCheese = problemEleven();
-console.log("All we have with chease and tomato are: ", tomatoAndCheese)
+// let tomatoAndCheese = problemEleven();
+// console.log("All we have with chease and tomato are: ", tomatoAndCheese)
 
 
 
@@ -392,11 +392,31 @@ console.log("All we have with chease and tomato are: ", tomatoAndCheese)
 
 
 
-
-
+function problemTwelve(){
+    let allServingsArray = dishes.map(function(el){
+        return el.servings;
+    })
+    return allServingsArray.reduce(function(total, el){
+        return total + el;
+    })
+}
+// let totalServings = problemTwelve();
+// console.log('All the servings', totalServings)
 
 
 
 
 
 //13. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
+//new array, slice out ?
+// .map .count
+
+
+
+
+// function problemThirteen(){
+//     dishes.filter(el === x.cuisine=='Italian').length
+
+// }
+// let allCuisineTypes = problemThirteen();
+// console.log('Array of cuisine types: ', allCuisineTypes)
